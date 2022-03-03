@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array Output</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h2>a=[10,20,30,40,50]</h2>
+    
+    <h4>Output Of the Array : <span id="output"></span></h4>
+</body>
+<script>
+// Ascii Value Convert    
+
+$( document ).ready(function() {
+    var array_value = [10,20,30,40,50];
+    
+    var new_array=[]
+    for(let i=0;i<array_value.length;i++){
+        var a=0;
+        for (let j = i; j <=  array_value.length-1; j++) {
+            a=a+array_value[j];            
+        }
+        new_array.push(a);       
+    }
+    console.log( new_array );
+    $("#output").text(new_array);
+});
+
+
+</script>
+</html>
